@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Login Failed</h1>
+        <a href="javascript:history.back()">Go Back</a> 
     </body>
 </html>
