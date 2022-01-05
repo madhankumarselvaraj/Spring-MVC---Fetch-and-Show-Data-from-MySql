@@ -12,6 +12,23 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <a href="login">Login</a>  
-    </body>
+    <center>
+        <form id="login" method="POST" action="/SpringMVC/login">
+            <table>
+                <tr>
+                    <td><label><!-- comment -->User Name : </label></td>
+                    <td><input type="text" id="username" name="username" /></td>
+                </tr>
+                <tr>
+                    <td><label><!-- comment -->Password : </label></td>
+                    <td><input type="text" id="password" name="password"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="sumbit" value="Submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
 </html>

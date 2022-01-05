@@ -15,10 +15,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var modelData =${employeeData};
-            console.log("metadata", modelData);
-
             var parsedata = JSON.parse(JSON.stringify(modelData))
-            alert(parsedata);
             var rows = "";
             for (var i = 0; i < parsedata.length; i++) {
                 var obj = parsedata[i];
@@ -37,6 +34,7 @@
         }
     </style>
     <body>
+        <h1>Employee Data</h1>
         <table id="itemList" >
             <thead>
                 <tr>
