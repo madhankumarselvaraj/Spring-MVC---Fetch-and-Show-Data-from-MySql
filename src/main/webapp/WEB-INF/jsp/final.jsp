@@ -12,30 +12,26 @@
         <title>JSP Page</title>
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
     <script type="text/javascript">
         $(document).ready(function () {
             var modelData =${employeeData};
-            var parsedata = JSON.parse(JSON.stringify(modelData))
-            var rows = "";
-            for (var i = 0; i < parsedata.length; i++) {
-                var obj = parsedata[i];
-                rows += "<tr><td>" + obj.id + "</td><td>" + obj.name + "</td><td>" + obj.salary + "</td></tr>";
-            }
-            $(rows).appendTo("#itemList tbody");
+            var parsedata = JSON.parse(JSON.stringify(modelData));
+            $('#itemList').DataTable({
+                data: parsedata,
+                "columns": [
+                    {"data": "id"},
+                    {"data": "name"},
+                    {"data": "salary"}
+                ]
+            });
         });
     </script>
-    <style>
-        table, th, td {
-            border: 1px solid white;
-            border-collapse: collapse;
-        }
-        th, td {
-            background-color: #96D4D4;
-        }
-    </style>
     <body>
         <h1>Employee Data</h1>
-        <table id="itemList" >
+        <table id="itemList" class="display" style="width:100%">
             <thead>
                 <tr>
                     <td>Id</td>
