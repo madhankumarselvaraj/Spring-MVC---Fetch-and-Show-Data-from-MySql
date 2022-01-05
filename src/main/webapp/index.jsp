@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type="sumbit" value="Submit">Submit</button></td>
+                        <td> <input type="submit" value="Submit"></td>
                     </tr>
                 </table>
             </form>

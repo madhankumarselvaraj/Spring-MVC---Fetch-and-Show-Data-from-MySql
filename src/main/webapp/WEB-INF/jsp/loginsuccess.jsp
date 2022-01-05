@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>JSP Page</title>
     </head>
-    <style>
+	<style>
         input[type=submit] {
             width: 100%;
             background-color: #4CAF50;
